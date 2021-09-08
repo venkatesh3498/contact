@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+body{
+    margin: 0%;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: rgb(31,97,141);
+}
+#author{
+    float: left;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1.5pt;
+    word-spacing: 3pt;
+    margin: -10% auto auto 3%;
+    
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+}
+#author a{
+    text-decoration: none;
+    color: white;
+}
+#author span{
+    color: #e97373;
+}
+
+.butt{
+    background-color: rgb(16,95,148);
+    padding: 1%;
+    font-size: 18px;
+    width: 80px;
+    color: white;
+    border-radius: 15px
+}
+.butt:hover{
+    background: #074168;
+}
+.contact_wrap{
+
+    height: 180px;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.contact_wrap::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    
+}
+.contact_wrap::-webkit-scrollbar-thumb {
+    background: rgb(240,244,247);
+    border-radius: 10px;
+}
+
+
+.wrapper{
+    background-color: rgb(35,30,57);
+    color: rgb(240,244,247);
+    width: 560px;
+    padding-bottom: 2%;
+    margin: 12% auto auto auto;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    width: 96%;
+    justify-content: space-around;
+    margin-left: 2%;
+    margin-bottom: 0.2%;
+    background-color: inherit;
+    border-radius: 10px;
+}
+/* .contact_wrap{
+    overflow-y: scroll;
+} */
+.contact:hover{
+    background-color: rgb(240,244,247);
+    color: black;
+    
+}
+
+.contact h3{
+    width: 35%;
+}
+.contact p{
+    width: 20%;
+    
+}
+.contact button{
+    width: max-content;
+    background-color: inherit;
+    border: none;
+    outline: none;
+
+}
+
+form{
+    margin: 4% auto;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    
+    padding-top: 3%;
+    margin: auto auto 2% 35%;
+}
+
+.head h1{
+    font-size: 2em;
+    margin: -1% auto auto 2%;
+}
+
+form input:not(:last-child){
+    height: 25px;
+    width: 65%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+}
+form input::placeholder{
+
+    padding-left: 38%;
+}
+
+form input{
+    outline: none;
+    border: none;
+    
+}
+
+
+@media  screen and (max-width:450px) {
+    .wrapper{
+        width: 440px;
+    }
+}

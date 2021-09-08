@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/c77eb12e10.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title><%= title %> </title>
+</head>
+<body>
+    <h2 id="author"><a href="https://venkateswararao.netlify.app/" target="_blank">Made By <span>Venkatesh</span></a></h2>
+    <div class="wrapper">
+        <div class="head">
+            <i class="far fa-address-book fa-2x"></i>
+            <h1>
+                Contact's
+            </h1>
+        </div>
+        <h3>Total Contatcts:-  <span id="counter"> </span></h3>
+        <form action="/action" method="POST">
+            <input type="text" placeholder="Enter Name" name="name" required>
+            <input type="number" name="number" placeholder="Enter Number" size="30" required >
+            <input type="submit" class="butt" value="Add">
+        </form>
+
+        <div class="contact_wrap">
+            <% for(let i of contact){ %>
+                <div class="contact">
+                    <h3> <%= i.name %></h3>
+                    <p> <%= i.number %></p>
+                    <button><a href="/delete/?number=<%= i._id %>" style="color: tomato;"><i class="fas fa-trash-alt fa-lg"></i></a></button>
+                </div>   
+            <% } %> 
+        </div>
+
+        
+
+    </div>
+    <script src="js/home.js"></script>
+</body>
+</html>
