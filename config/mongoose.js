@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost/contact_list_db');
+var dev_db_url = 'mongodb+srv://m001-student:bpotZbGpiUWe2OhG@sandbox.1oufz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
+mongoose.connect(mongoDB);
 
 const db = mongoose.connection;
 

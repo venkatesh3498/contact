@@ -10,7 +10,7 @@ const app = express();
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname,'views'));
 
-const port = process.env.port||8000;
+const port = process.env.port||80;
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.static("assets"))
